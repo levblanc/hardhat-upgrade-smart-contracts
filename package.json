@@ -1,8 +1,7 @@
 {
-  "name": "hardhat-starter-kit",
+  "name": "hardhat-boilerplate",
   "license": "MIT",
-  "version": "2.0.0",
-  "description": "A repo for boilerplate code for testing, deploying, and shipping chainlink solidity code.",
+  "version": "1.0.0",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test test/unit/*.spec.js",
@@ -11,8 +10,7 @@
     "lint": "solhint 'contracts/*.sol'",
     "lint:fix": "solhint 'contracts/**/*.sol' --fix",
     "format": "prettier --write .",
-    "coverage": "hardhat coverage --solcoverjs ./.solcover.js",
-    "fuzzing": "docker run -it --rm -v $PWD:/src trailofbits/eth-security-toolbox"
+    "coverage": "hardhat coverage --solcoverjs ./.solcover.js"
   },
   "devDependencies": {
     "@chainlink/contracts": "0.5.1",
