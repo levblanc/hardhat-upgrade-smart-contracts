@@ -1,11 +1,12 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("hardhat-deploy");
 require("dotenv").config();
 const {
     LOCAL_BLOCK_CONFIRMATIONS,
     VERIFICATION_BLOCK_CONFIRMATIONS,
 } = require("./helper-hardhat-config");
 
-const { GOERLI_ALCHEMY_URL, PRIVATE_KEY, ETHERSCAN_API_KEY } = process.env;
+const { GOERLI_RPC_URL, PRIVATE_KEY, ETHERSCAN_API_KEY } = process.env;
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -29,7 +30,7 @@ module.exports = {
         },
         goerli: {
             chainId: 5,
-            url: GOERLI_ALCHEMY_URL,
+            url: GOERLI_RPC_URL,
             blockConfirmations: VERIFICATION_BLOCK_CONFIRMATIONS,
             accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
         },
