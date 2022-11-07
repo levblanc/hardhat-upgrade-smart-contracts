@@ -20,7 +20,12 @@ contract SmallProxy is Proxy {
         }
     }
 
-    function _implementation() internal view override returns (address implementationAddress) {
+    function _implementation()
+        internal
+        view
+        override
+        returns (address implementationAddress)
+    {
         assembly {
             implementationAddress := sload(_IMPLEMENTATION_SLOT)
         }
@@ -29,12 +34,18 @@ contract SmallProxy is Proxy {
     // Helper functions
 
     // Get the byte data for "low level interactions" input in Remix IDE
-    function getDataToTransact(uint256 numberToUpdate) public pure returns (bytes memory) {
+    function getDataToTransact(
+        uint256 numberToUpdate
+    ) public pure returns (bytes memory) {
         return abi.encodeWithSignature("setValue(uint256)", numberToUpdate);
     }
 
     // Reads whatever is set in storage slot 0 of SmallProxy
-    function readStorage() public view returns (uint256 valueAtStorageSlotZero) {
+    function readStorage()
+        public
+        view
+        returns (uint256 valueAtStorageSlotZero)
+    {
         assembly {
             valueAtStorageSlotZero := sload(0)
         }
