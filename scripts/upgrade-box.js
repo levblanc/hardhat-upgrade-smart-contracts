@@ -1,5 +1,6 @@
 const { ethers } = require("hardhat");
 
+// Mannual upgrade example
 const upgrade = async () => {
     const boxProxyAdmin = await ethers.getContract("BoxProxyAdmin");
     const transparentProxy = await ethers.getContract("BoxV1_Proxy");
