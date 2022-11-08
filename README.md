@@ -59,59 +59,23 @@ ETHERSCAN_API_KEY=your_etherscan_api_key
 For local development:
 
 ```zsh
-# spin up hardhat local node
-yarn localhost
+# compile contracts
+yarn compile
 
 # deploy contract
 yarn deploy
-
-# Run `fund` function
-yarn fund:local
-
-# Run `withdraw` function
-yarn withdraw:local
 ```
 
-For Goerli testnet:
+Try Upgrade:
 
 ```zsh
-# deploy contract to Goerli
-yarn deploy:goerli
+# In terminal 1: spin up hardhat local node
+yarn localhost
 
-# Run `fund` function
-yarn fund:goerli
-
-# Run `withdraw` function
-yarn withdraw:goerli
+# In terminal 2: run upgrade script
+yarn upgrade:local
 ```
 
-Run tests
-
-```zsh
-# Run unit tests
-yarn test
-
-# Run staging tests (on Goerli testnet)
-yarn test:staging
-```
-
-Check tests coverage
-
-```zsh
-yarn coverage
-```
-
-[Optional] Generate converage report
-
-```js
-// hardhat.config.js
-module.exports = {
-  // ... other configs
-  gasReporter: {
-    enabled: true, // set to true when needs a report
-  },
-};
-```
 
 Lint Solidity files
 
@@ -157,6 +121,7 @@ yarn format
 ## Worth to Reads
 
 1. [The State of Smart Contract Upgrades](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/)
+2. [OpenZeppelin - Upgrades Plugins](https://docs.openzeppelin.com/upgrades-plugins/1.x/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
