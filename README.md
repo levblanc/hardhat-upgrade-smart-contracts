@@ -20,7 +20,7 @@
 
 <div align="center">
   <p align="center">
-    <a href="https://github.com/levblanc/hardhat-upgrade-smart-contracts"><img src="https://img.shields.io/badge/challenge%2011-Smart%20Contract%20Upgrades%20--%20Hardhat%20(lesson%2016)-4D21FC?style=for-the-badge&logo=blockchaindotcom" height="35" alt='challenge-11' /></a>
+    <a href="https://github.com/levblanc/hardhat-upgrade-smart-contracts"><img src="https://img.shields.io/badge/challenge%2012-Smart%20Contract%20Upgrades%20--%20Hardhat%20(lesson%2016)-4D21FC?style=for-the-badge&logo=blockchaindotcom" height="35" alt='challenge-12' /></a>
   </p>
 
 <a href="https://github.com/levblanc/hardhat-upgrade-smart-contracts">View
