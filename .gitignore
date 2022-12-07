@@ -10,6 +10,9 @@ coverage
 coverage.json
 typechain
 
+# openzeppelin files
+.openzeppelin
+
 # don't push the environment vars!
 .env
 
