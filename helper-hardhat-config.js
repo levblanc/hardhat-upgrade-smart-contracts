@@ -16,6 +16,7 @@ const networkConfig = {
 const developmentChains = ["hardhat", "localhost"];
 const LOCAL_BLOCK_CONFIRMATIONS = 1;
 const VERIFICATION_BLOCK_CONFIRMATIONS = 6;
+const PROXY_DEPLOYMENT_TIMEOUT = 5 * 60 * 1000;
 
 module.exports = {
     networkConfig,
