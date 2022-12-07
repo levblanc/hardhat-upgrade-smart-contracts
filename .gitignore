@@ -11,7 +11,7 @@ coverage.json
 typechain
 
 # openzeppelin files
-.openzeppelin
+.openzeppelin/unknown-*.json
 
 # don't push the environment vars!
 .env
