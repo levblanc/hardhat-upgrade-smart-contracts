@@ -23,4 +23,5 @@ module.exports = {
     developmentChains,
     LOCAL_BLOCK_CONFIRMATIONS,
     VERIFICATION_BLOCK_CONFIRMATIONS,
+    PROXY_DEPLOYMENT_TIMEOUT,
 };
