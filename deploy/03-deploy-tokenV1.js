@@ -53,20 +53,20 @@ module.exports = async ({ deployments }) => {
         contract: myTokenV1Address,
     };
 
-    const filepath = path.resolve(
+    const filePath = path.resolve(
         __dirname,
         "../constants/contractAddresses.json"
     );
 
     let addressesRecords = {};
 
-    if (!fs.existsSync(filepath)) {
-        fs.createFileSync(filepath);
+    if (!fs.existsSync(filePath)) {
+        fs.createFileSync(filePath);
     } else {
-        addressesData = fs.readFileSync(filepath, { encoding: "utf-8" });
+        const fileData = fs.readFileSync(filePath, { encoding: "utf-8" });
 
-        if (addressesData.length) {
-            addressesRecords = JSON.parse(addressesData);
+        if (fileData.length) {
+            addressesRecords = JSON.parse(fileData);
         }
     }
 
@@ -81,7 +81,7 @@ module.exports = async ({ deployments }) => {
     }
 
     try {
-        fs.writeFileSync(filepath, JSON.stringify(addressesRecords, null, 2));
+        fs.writeFileSync(filePath, JSON.stringify(addressesRecords, null, 2));
         log(">>>>>> Save success!");
     } catch (error) {
         log(">>>>>> Save failed!");
